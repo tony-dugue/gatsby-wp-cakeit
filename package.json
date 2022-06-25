@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "cakeit-wp",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A super cool Gatsby-WP site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@weibenfalk",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.17.1",
