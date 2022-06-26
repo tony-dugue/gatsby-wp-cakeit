@@ -43,6 +43,11 @@ $ yarn start #ou $ npm run start
 
 Le site sera exécuté par défaut à l'adresse : `http://localhost:8000`
 
+Pour vider le cache :
+```bash
+$ yarn clean
+```
+
 ## 🎓 Ressources utilisées dans le projet
 
 Plugin Worpress : [gatsby-source-wordpress](https://www.npmjs.com/package/gatsby-source-wordpress) <br />
