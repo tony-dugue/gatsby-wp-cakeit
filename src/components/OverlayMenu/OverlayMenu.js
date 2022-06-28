@@ -25,7 +25,7 @@ const OverlayMenu = ({ menuOpen, callback }) => {
           ))}
         </ul>
 
-        <div className="closeButton" onClick={callback} role="button" tabIndex="0">
+        <div className="closeButton" onClick={callback} role="button" tabIndex="0" onKeyDown={callback}>
           <img src={CloseButton} alt="close-button" />
         </div>
 
