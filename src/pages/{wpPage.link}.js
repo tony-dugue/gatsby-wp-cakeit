@@ -4,11 +4,15 @@ import styled from 'styled-components'
 
 // Components
 import Layout from '../components/Layout/Layout'
+import PageHero from "../components/PageHero/PageHero";
 
 const PageTemplate = ({ data }) => (
   <Layout>
-      {console.log(data)}
-    <p>Page Hero</p>
+
+    { data.wpPage.featuredImage ? (
+      <PageHero img={data.wpPage.featuredImage.node.localFile.childImageSharp.gatsbyImageData} />
+    ) : null }
+
     <Wrapper>
       <p>Sidebar</p>
       <p>Content</p>
