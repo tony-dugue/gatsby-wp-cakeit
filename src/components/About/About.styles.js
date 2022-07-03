@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   background: #ddd;
@@ -27,3 +27,19 @@ export const AboutImage = styled.div`
   background-position: center;
   min-height: 300px;
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
