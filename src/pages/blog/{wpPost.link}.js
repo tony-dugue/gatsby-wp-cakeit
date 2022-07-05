@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../../components/Layout/Layout'
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb'
+import PostSidebar from "../../components/PostSidebar/PostSidebar";
 
 const PostTemplate = ({ data }) => (
   <Layout>
@@ -11,10 +12,14 @@ const PostTemplate = ({ data }) => (
     <Wrapper>
       <BreadCrumb parent={{ uri: '/blog/all-posts', title: 'blog' }} />
       <ContentWrapper>
-        Sidebar goes here
+        <PostSidebar
+          date={data.post.date}
+          author={data.post.author.node.name}
+          categories={data.post.categories.nodes}
+        />
         <PostContent>
-          <h1>Header here</h1>
-          <div>Content here</div>
+          <h1 dangerouslySetInnerHTML={{ __html: data.post.title }} />
+          <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
         </PostContent>
       </ContentWrapper>
     </Wrapper>
