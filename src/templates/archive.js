@@ -7,6 +7,7 @@ import BreadCrumb from '../components/BreadCrumb/BreadCrumb'
 
 import {ContentWrapper, StyledDate, StyledH2, StyledReadMore, Wrapper} from "./archive.styles";
 import ArchiveSidebar from "../components/ArchiveSidebar/ArchiveSidebar";
+import Pagination from "../components/Pagination/Pagination";
 
 const archiveTemplate = ({
   data: { allWpPost },
@@ -41,6 +42,9 @@ const archiveTemplate = ({
                 <div className="dot-divider" />
               </article>
             ))}
+
+            <Pagination catUri={catUri} page={currentPage} totalPages={numPages} />
+
           </pageContent>
         </ContentWrapper>
       </Wrapper>
