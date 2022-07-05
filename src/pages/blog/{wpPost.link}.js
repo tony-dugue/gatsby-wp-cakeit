@@ -5,8 +5,9 @@ import styled from 'styled-components'
 import Layout from '../../components/Layout/Layout'
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb'
 
-const PostTemplate = () => (
+const PostTemplate = ({ data }) => (
   <Layout>
+    {console.log(data)}
     <Wrapper>
       <BreadCrumb parent={{ uri: '/blog/all-posts', title: 'blog' }} />
       <ContentWrapper>
@@ -38,4 +39,27 @@ const ContentWrapper = styled.div`
 
 const PostContent = styled.article`
   margin-top: 20px;
+`
+
+export const pageQuery = graphql`
+    query($id: String!) {
+        post: wpPost(id: { eq: $id }) {
+            title
+            content
+            author {
+                node {
+                    name
+                }
+            }
+            date(formatString: "DD MM YYYY")
+            categories {
+                nodes {
+                    id
+                    name
+                    uri
+                    slug
+                }
+            }
+        }
+    }
 `
